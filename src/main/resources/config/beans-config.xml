@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="articleDao" class="fr.creative.stock.doa.impl.ArticleDaoImpl" />
+	<bean id="articleService" class="fr.creative.stock.service.impl.ArticleServiceImpl">
+		<property name="articleDao" ref="articleDao"></property>
+	</bean>
+	
+	<bean id="catDao" class="fr.creative.stock.doa.impl.CategorieDaoImpl" />
+	<bean id="categorieService" class="fr.creative.stock.service.impl.CategorieServiceImpl">
+		<property name="categorieDao" ref="catDao"></property>
+	</bean>
+	
+	<bean id="cliDao" class="fr.creative.stock.doa.impl.ClientDaoImpl" />
+	<bean id="clientService" class="fr.creative.stock.service.impl.ClientServiceImpl">
+		<property name="clientDao" ref="cliDao"></property>
+	</bean>
+	
+	<bean id="cmdCliDao" class="fr.creative.stock.doa.impl.CommandeClientDaoImpl" />
+	<bean id="cmdCliService" class="fr.creative.stock.service.impl.CommandeClientServiceImpl">
+		<property name="commandeClientDao" ref="cmdCliDao"></property>
+	</bean>
+	
+	<bean id="cmdFrsDao" class="fr.creative.stock.doa.impl.CommandeFournisseurDaoImpl" />
+	<bean id="cmdFrsService" class="fr.creative.stock.service.impl.CommandeFournisseurServiceImpl">
+		<property name="commandeFournisseurDao" ref="cmdFrsDao"></property>
+	</bean>
+	
+	<bean id="fournisseurDao" class="fr.creative.stock.doa.impl.FournisseurDaoImpl" />
+	<bean id="fournisseurService" class="fr.creative.stock.service.impl.FournisseurServiceImpl">
+		<property name="fournisseurDao" ref="fournisseurDao"></property>
+	</bean>
+	
+	<bean id="ligneCmdCliDao" class="fr.creative.stock.doa.impl.LigneCommandeClientDaoImpl" />
+	<bean id="ligneCmdCliService" class="fr.creative.stock.service.impl.LigneCommandeClientServiceImpl">
+		<property name="ligneCommandeClientDao" ref="ligneCmdCliDao"></property>
+	</bean>
+	
+	<bean id="ligneCmdFrsDao" class="fr.creative.stock.doa.impl.LigneCommandeFournisseurDaoImpl" />
+	<bean id="lignecmdFrsService" class="fr.creative.stock.service.impl.LigneCommandeFournisseurServiceImpl">
+		<property name="ligneCommandeFournisseurDao" ref="ligneCmdFrsDao"></property>
+	</bean>
+	
+	<bean id="ligneVenteDao" class="fr.creative.stock.doa.impl.LigneVenteDaoImpl" />
+	<bean id="ligneVenteService" class="fr.creative.stock.service.impl.LigneVenteServiceImpl">
+		<property name="ligneVenteDao" ref="ligneVenteDao"></property>
+	</bean>
+	
+	<bean id="mvtStkDao" class="fr.creative.stock.doa.impl.MvtStkDaoImpl" />
+	<bean id="mvtStkService" class="fr.creative.stock.service.impl.MvtStkServiceImpl">
+		<property name="mvtStkDao" ref="mvtStkDao"></property>
+	</bean>
+	
+	<bean id="userDao" class="fr.creative.stock.doa.impl.UtilisateurDaoImpl" />
+	<bean id="userService" class="fr.creative.stock.service.impl.UtilisateurServiceImpl">
+		<property name="utilisateurDao" ref="userDao"></property>
+	</bean>
+	
+	<bean id="venteDao" class="fr.creative.stock.doa.impl.VenteDaoImpl" />
+	<bean id="venteService" class="fr.creative.stock.service.impl.VenteServiceImpl">
+		<property name="venteDao" ref="venteDao"></property>
+	</bean>
+	
+	<bean id="flickDao" class="fr.creative.stock.doa.impl.FlickrDaoImpl" />
+	<bean id="flickrService" class="fr.creative.stock.service.impl.FlickrServiceImpl">
+		<property name="flickrDao" ref="flickDao"></property>
+	</bean>
+	
+</beans>

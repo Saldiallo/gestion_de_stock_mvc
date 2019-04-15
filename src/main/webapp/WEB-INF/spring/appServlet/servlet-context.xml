@@ -21,6 +21,12 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<!-- Load FILE -->
+	<beans:bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->  
+    	<beans:property name="maxUploadSize" value="2097153" />
+	</beans:bean>
+	
 	<context:component-scan base-package="fr.creative.stock" />
 	
 	

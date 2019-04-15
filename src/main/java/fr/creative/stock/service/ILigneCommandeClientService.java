@@ -22,6 +22,8 @@ public interface ILigneCommandeClientService {
 	
 	public LigneCommandeClient findOne(String[] paramNames,Object[] paramValue);
 	
-	public int findCountBy(String paramName,String paramValue);	
+	public int findCountBy(String paramName,String paramValue);
+
+	public List<LigneCommandeClient> getByIdCommande(Long idCommandeClient);	
 
 }

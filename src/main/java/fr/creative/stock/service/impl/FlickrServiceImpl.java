@@ -2,9 +2,12 @@ package fr.creative.stock.service.impl;
 
 import java.io.InputStream;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import fr.creative.stock.doa.IFlickrDao;
 import fr.creative.stock.service.IFlickrService;
 
+@Transactional
 public class FlickrServiceImpl implements IFlickrService {
 	
 	private IFlickrDao flickrDao;
@@ -16,7 +19,7 @@ public class FlickrServiceImpl implements IFlickrService {
 	@Override
 	public String savePhoto(InputStream stream, String fileName) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		return flickrDao.savePhoto(stream, fileName);
 	}
 
 }

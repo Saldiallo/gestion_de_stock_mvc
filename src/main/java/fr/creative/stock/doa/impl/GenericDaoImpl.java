@@ -66,7 +66,7 @@ public class GenericDaoImpl<E> implements IGenericDao<E> {
 	@Override
 	public E findOne(String paramName, Object paramValue) {
 		Query query = em.createQuery("SELECT t FROM "+ type.getSimpleName() +" t WHERE "+paramName+" =:x");
-		query.setParameter(paramName, paramValue);
+		query.setParameter("x", paramValue);
 		return query.getResultList().size() > 0 ? (E)query.getResultList().get(0):null;
 	}
 

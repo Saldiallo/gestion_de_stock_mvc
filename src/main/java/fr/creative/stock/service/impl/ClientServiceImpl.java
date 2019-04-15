@@ -2,10 +2,13 @@ package fr.creative.stock.service.impl;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import fr.creative.stock.doa.IClientDao;
 import fr.creative.stock.entities.Client;
 import fr.creative.stock.service.IClientService;
 
+@Transactional
 public class ClientServiceImpl implements IClientService {
 	
 	private IClientDao clientDao;

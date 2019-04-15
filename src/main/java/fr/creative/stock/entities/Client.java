@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 @Entity
 public class Client implements Serializable{
 	@Id
@@ -68,6 +70,7 @@ public class Client implements Serializable{
 		this.photo = photo;
 	}
 
+	@JsonIgnore
 	public Collection<CommandeClient> getCommandeClients() {
 		return commandeClients;
 	}
